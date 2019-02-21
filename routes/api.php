@@ -17,4 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/Products','ApiAuthController@Products');
+//Route::post('/Products','ApiAuthController@Products');
+
+Route::apiResource('/products','ProductController');
